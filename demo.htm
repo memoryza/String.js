@@ -1,0 +1,11 @@
+<script src="String.js"></script>
+<script>
+    var foo = '  1 2 3 ',
+        slog = function(msg) {
+            return console && typeof console.log === "function" ? console.log(msg) : alert(msg);
+        };
+    slog(foo.length);
+    slog(foo.trimLeft().length);
+    slog(foo.trimRight().length);
+    slog(foo.trim().length)
+</script>
