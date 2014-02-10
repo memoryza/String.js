@@ -7,5 +7,16 @@
     slog(foo.length);
     slog(foo.trimLeft().length);
     slog(foo.trimRight().length);
-    slog(foo.trim().length)
+    slog(foo.trim().length);
+    // Basic use
+    split('a b c d', ' ');
+    // -> ['a', 'b', 'c', 'd']
+ 
+    // With limit
+     split('a b c d', ' ', 2);
+    // -> ['a', 'b']
+
+    // Backreferences in result array
+    split('..word1 word2..', /([a-z]+)(\d+)/i);
+    // -> ['..', 'word', '1', ' ', 'word', '2', '..']
 </script>
