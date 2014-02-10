@@ -1,4 +1,4 @@
-;(function(){
+;(function(undef){
     function isType(type) {
         return function(obj) {
             return {}.toString(obj) == "[Object" + type + "]";
