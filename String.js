@@ -14,30 +14,12 @@
     }
     if(!isFunction(_StrProtoCache.trimLeft)) {
         _StrProtoCache.trimLeft = function() {
-            var str = '',
-                char;
-            for(var i = 0,len = this.length; i < len; i++) {
-                char = this.charAt(i);
-                if(char !== ' ') {
-                    str = this.slice(i);
-                    break;
-                }
-            }
-            return str;
+            return this.replace(/^\s+/, '');
         }
     }
     if(!isFunction(_StrProtoCache.trimRight)) {
         _StrProtoCache.trimRight = function() {
-            var str = '',
-                char;
-            for(var i = this.length - 1; i > 0; i--) {
-                char = this.charAt(i);
-                if(char !== ' ') {
-                    str = this.substring(i + 1, -1);
-                    break;
-                }
-            }
-            return str;
+            return this.replace(/\s+$/, '');
         }
     }
     /* from: http://blog.stevenlevithan.com/archives/cross-browser-split*/
